@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     //ch
-    this.http.get('http://161.35.59.8/api/dashboard')
+    this.http.get('http://161.35.59.8:3000/api/dashboard')
     .subscribe((res: any) => {
       console.log(res);
     for(var i = 0; i < res.budget.length; i++) {
@@ -137,7 +137,7 @@ addData(chart, label,data) {
 
     //ch
     console.log(budgetInfo);
-    this.http.post('http://161.35.59.8/api/dashboard', budgetInfo)
+    this.http.post('http://161.35.59.8:3000/api/dashboard', budgetInfo)
     .subscribe((res: any) => {
       console.log('test');
       console.log(res);
@@ -146,7 +146,7 @@ addData(chart, label,data) {
         this.nameInput = "";
         this.valueInput = "";
         //ch
-        this.http.get('http://161.35.59.8/api/dashboard')
+        this.http.get('http://161.35.59.8:3000/api/dashboard')
         .subscribe((res: any) => {
           console.log(res);
         for(var i = 0; i < res.budget.length; i++) {

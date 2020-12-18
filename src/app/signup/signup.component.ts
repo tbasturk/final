@@ -29,7 +29,7 @@ export class SignupComponent implements OnInit {
       password: this.f.password.value
     };
     // ch
-    this.http.post('http://161.35.59.8/api/signup', signUp)
+    this.http.post('http://161.35.59.8:3000/api/signup', signUp)
       .subscribe((res: any) => {
         console.log('testing');
         if (res && res.success) {
