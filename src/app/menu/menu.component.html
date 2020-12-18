@@ -1,0 +1,26 @@
+<nav>
+  <div class="menu">
+      <ul>
+          <li><a [routerLink]="['/']">Home</a></li>
+          <li><a [routerLink]="['/about']">About</a></li>
+
+          <li *ngIf="!(loginStatus$ | async) as loginStatus">
+          <a *ngIf="loginStatus" [routerLink]="['/login']">Login</a>
+        </li>
+
+          <li><a [routerLink]="['/contact']">Contact</a></li>
+
+          <li *ngIf="!(loginStatus$ | async) as loginStatus">
+            <a *ngIf="loginStatus"  [routerLink]="['/signup']">Sign Up</a>
+          </li>
+
+          <li *ngIf="(loginStatus$ | async) as loginStatus">
+            <a (click)="onLogOut()" *ngIf="loginStatus">Logout</a>
+          </li>
+
+          <li *ngIf="(loginStatus$ | async) as loginStatus">
+            <a *ngIf="loginStatus" [routerLink]="['/dashboard']">Dashboard</a>
+          </li>
+      </ul>
+  </div>
+</nav>

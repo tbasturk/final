@@ -1,0 +1,49 @@
+<p>Your Personal Budget!</p>
+<br>
+<p>You can Start managing your budget now!</p>
+
+
+<div class="form-group">
+  <label for="name">Title: </label>
+  <input type="text" class="form-control" id="name"
+         required
+         [(ngModel)]="nameInput" name="name">
+</div>
+
+<div class="form-group">
+  <label for="budget">Budget: </label>
+  <input type="text"  class="form-control" id="budget"
+         [(ngModel)]="valueInput" name="budget">
+</div>
+
+<br>
+
+<div>
+  <input type = "button" (click) = "addBudget()" value = "Add Budget"/>
+</div>
+
+
+<div class="text-box">
+  <p>
+      <canvas id="myChart" width="400" height="250"></canvas>
+  </p>
+</div>
+
+
+<div class ="nut">
+  <p>
+    <canvas id="nut" width ="400" height ="250"></canvas>
+  </p>
+</div>
+
+
+<div class ="line">
+  <p>
+    <canvas id="line" width ="400" height ="250"></canvas>
+  </p>
+</div>
+
+
+
+
+

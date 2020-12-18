@@ -1,0 +1,23 @@
+
+<div class="signup">
+  <h1 class="head">Sign Up</h1>
+  <form [formGroup]="signUpForm" (ngSubmit)="register()">
+      <div class="row">
+          <label for="username">Username</label>
+          <br>
+          <input type="text" formControlName="username" name="username" id="username">
+      </div>
+      <div class="row">
+          <label for="password">Password</label>
+          <br>
+          <input type="password" formControlName="password" name="password" id="password">
+      </div>
+      <p id="message" style="visibility: hidden;"></p>
+      <div>
+          <button>Sign Up</button>
+      </div>
+  </form>
+
+
+
+
